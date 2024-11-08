@@ -1,16 +1,16 @@
 # clean_flutter_poc
 
-A new Flutter project.
+A Clean Architecture Flutter POC using Bloc TDD
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Dependencies:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. flutter: SDK for building natively compiled applications for mobile, web, and desktop from a single codebase.
+2. cupertino_icons: ^1.0.2 - Provides iOS style icons for use in Flutter applications.
+3. dartz: ^0.10.1 - Functional programming in Dart, including the Either type for handling errors.
+4. equatable: ^2.0.3 - Simplifies value equality comparisons in Dart objects.
+5. flutter_bloc: ^8.0.1 - State management library that helps implement the BLoC (Business Logic Component) pattern.
+6. get_it: ^7.2.0 - Simple service locator for dependency injection.
+7. http: ^0.13.3 - A composable, Future-based library for making HTTP requests.
+8. rxdart: ^0.27.3 - Adds additional capabilities to Dart Streams and StreamControllers, inspired by ReactiveX.

@@ -1,4 +1,6 @@
-class LoginResponseItem {
+import 'package:equatable/equatable.dart';
+
+class LoginResponseItem extends Equatable {
   final String token;
   final String refreshToken;
 
@@ -7,17 +9,9 @@ class LoginResponseItem {
     required this.refreshToken,
   });
 
-  factory LoginResponseItem.fromJson(Map<String, dynamic> json) {
-    return LoginResponseItem(
-      token: json['token'],
-      refreshToken: json['refreshToken'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'token': token,
-      'refreshToken': refreshToken,
-    };
-  }
+  @override
+  List<Object?> get props => [
+        token,
+        refreshToken,
+      ];
 }

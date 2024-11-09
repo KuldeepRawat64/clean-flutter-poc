@@ -14,3 +14,5 @@ Dependencies:
 6. get_it: ^7.2.0 - Simple service locator for dependency injection.
 7. http: ^0.13.3 - A composable, Future-based library for making HTTP requests.
 8. rxdart: ^0.27.3 - Adds additional capabilities to Dart Streams and StreamControllers, inspired by ReactiveX.
+
+This project is part of a Medium Article: https://medium.com/@kuldeeprwt64/flutter-clean-architecture-bloc-tdd-a-practical-guide-for-beginners-a94d79f9f3f3

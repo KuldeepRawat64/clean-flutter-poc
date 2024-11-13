@@ -1,5 +1,5 @@
 import 'package:clean_flutter_poc/core/failure.dart';
-import 'package:clean_flutter_poc/modules/auth/login/data/models/login_reponse_model.dart';
+import 'package:clean_flutter_poc/modules/auth/login/data/models/login_response_model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -22,7 +22,7 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
     );
 
     if (response.statusCode == 200) {
-      return LoginResponseModel.fromJson(json.decode(response.body)['data']);
+      return LoginResponseModel.fromJson(json.decode(response.body));
     } else {
       throw ServerFailure('Failed to log in');
     }

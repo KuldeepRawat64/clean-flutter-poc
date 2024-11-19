@@ -1,3 +1,4 @@
+// coverage:ignore-file
 import 'package:clean_flutter_poc/modules/auth/login/data/remote_data_sources/login_remote_data_source.dart';
 import 'package:clean_flutter_poc/modules/auth/login/data/repositories/login_repository_impl.dart';
 import 'package:clean_flutter_poc/modules/auth/login/domain/repositories/login_repository.dart';

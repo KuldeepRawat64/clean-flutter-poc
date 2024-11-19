@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>LCOV - lcov.info - domain/usecases/login_user.dart</title>
+  <title>LCOV - lcov.info - presenters/bloc/auth_event.dart</title>
   <link rel="stylesheet" type="text/css" href="../../gcov.css">
 </head>
 
@@ -19,7 +19,7 @@
                 <table cellpadding=1 border=0 width="100%">
           <tr>
             <td width="10%" class="headerItem">Current view:</td>
-            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory domain/usecases">domain/usecases</a> - login_user.dart<span style="font-size: 80%;"> (source / <a href="login_user.dart.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory presenters/bloc">presenters/bloc</a> - auth_event.dart<span style="font-size: 80%;"> (source / <a href="auth_event.dart.func-c.html" title="Click to go to function table">functions</a>)</span></td>
             <td width="5%"></td>
             <td width="5%"></td>
             <td width="5%" class="headerCovTableHead">Coverage</td>
@@ -31,9 +31,9 @@
             <td class="headerValue">lcov.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">3</td>
-            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">4</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
@@ -60,20 +60,26 @@
               <td>
 <pre class="sourceHeading">            Line data    Source code</pre>
 <pre class="source">
-<span id="L1"><span class="lineNum">       1</span>              : import 'package:clean_flutter_poc/core/failure.dart';</span>
-<span id="L2"><span class="lineNum">       2</span>              : import 'package:clean_flutter_poc/modules/auth/login/domain/entities/login_response_item.dart';</span>
-<span id="L3"><span class="lineNum">       3</span>              : import 'package:clean_flutter_poc/modules/auth/login/domain/repositories/login_repository.dart';</span>
-<span id="L4"><span class="lineNum">       4</span>              : import 'package:dartz/dartz.dart';</span>
+<span id="L1"><span class="lineNum">       1</span>              : part of 'auth_bloc.dart';</span>
+<span id="L2"><span class="lineNum">       2</span>              : </span>
+<span id="L3"><span class="lineNum">       3</span>              : abstract class AuthEvent extends Equatable {</span>
+<span id="L4"><span class="lineNum">       4</span> <span class="tlaGNC tlaBgGNC">           3 :   const AuthEvent();</span></span>
 <span id="L5"><span class="lineNum">       5</span>              : </span>
-<span id="L6"><span class="lineNum">       6</span>              : class LoginUser {</span>
-<span id="L7"><span class="lineNum">       7</span>              :   final LoginRepository _loginRepository;</span>
-<span id="L8"><span class="lineNum">       8</span> <span class="tlaGNC tlaBgGNC">           1 :   LoginUser(this._loginRepository);</span></span>
+<span id="L6"><span class="lineNum">       6</span> <span class="tlaUNC tlaBgUNC">           0 :   @override</span></span>
+<span id="L7"><span class="lineNum">       7</span> <span class="tlaUNC">           0 :   List&lt;Object?&gt; get props =&gt; [];</span></span>
+<span id="L8"><span class="lineNum">       8</span>              : }</span>
 <span id="L9"><span class="lineNum">       9</span>              : </span>
-<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">           1 :   Future&lt;Either&lt;Failure, LoginResponseItem&gt;&gt; execute(</span></span>
-<span id="L11"><span class="lineNum">      11</span>              :       String email, String password) async {</span>
-<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           2 :     return await _loginRepository.login_user(email, password);</span></span>
-<span id="L13"><span class="lineNum">      13</span>              :   }</span>
-<span id="L14"><span class="lineNum">      14</span>              : }</span>
+<span id="L10"><span class="lineNum">      10</span>              : class OnLoginEvent extends AuthEvent {</span>
+<span id="L11"><span class="lineNum">      11</span>              :   // This event will trigger on login button click</span>
+<span id="L12"><span class="lineNum">      12</span>              :   // And the entered username and password will be passed to this event</span>
+<span id="L13"><span class="lineNum">      13</span>              :   final String username;</span>
+<span id="L14"><span class="lineNum">      14</span>              :   final String password;</span>
+<span id="L15"><span class="lineNum">      15</span>              : </span>
+<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC tlaBgGNC">           3 :   OnLoginEvent(this.username, this.password);</span></span>
+<span id="L17"><span class="lineNum">      17</span>              : </span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           2 :   @override</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           6 :   List&lt;Object?&gt; get props =&gt; [username, password];</span></span>
+<span id="L20"><span class="lineNum">      20</span>              : }</span>
         </pre>
               </td>
             </tr>
